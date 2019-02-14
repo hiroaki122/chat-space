@@ -38,7 +38,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, index unique: true|
+|name|string|null: false, index: true, unique: true|
 
 ### Assosiation
 - has_many :messages
