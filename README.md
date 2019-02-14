@@ -33,3 +33,14 @@
 - has_many :groups,through: members
 - has_many :messages
 - has_many :members
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, index unique: true|
+
+### Assosiation
+- has_many :messages
+- has_many :members
+- has_many :users,through::members
