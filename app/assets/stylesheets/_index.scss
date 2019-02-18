@@ -1,0 +1,161 @@
+@import "_variable.scss";
+
+.flex {
+  display: flex;
+}
+
+
+
+.sidebar {
+  background-color: $sidebar-color;
+  width: 300px;
+  height: 100vh;
+
+  .sidebar__header {
+    background-color: $sidebar-header-color;
+
+    height: 15vh;
+    font-weight: bold;
+    font-size: 16px;
+    color: $sidebar-font;
+    padding: 40px 20px 20px 20px;
+    justify-content: space-between;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+  }
+
+  .sidebar__item {
+    font-size: 15px;
+    color: $sidebar-font;
+    padding: 20px 5px 5px 20px;
+
+
+
+    :nth-child(2) {
+      font-size: 11px;
+      margin-top: 5px;
+
+    }
+  }
+}
+
+
+
+.chatroom {
+
+
+
+  .chatroom__header {
+    height: 100px;
+    padding: 35px 0px 0px 40px;
+    font-size: 20px;
+    color: #333;
+
+
+    :nth-child(2) {
+      font-size: 12px;
+      color: #999999;
+      margin-top: 15px;
+
+    }
+
+    .chatroom__header__edit-btn {
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      padding: 0 20px;
+      margin-top: 0px;
+      border: solid 1px $edit-color;
+      color: $edit-color;
+      position: absolute;
+      right: 40px;
+      top: 30px;
+
+    }
+
+  }
+
+  .chatroom__main {
+    background-color: $chatroom-main-color;
+    width: calc(100vw - 300px);
+    height: calc(100vh - 190px);
+    overflow: scroll;
+    padding: 46px 40px;
+    color: #434a54;
+
+    .chatroom__main__box {
+      padding-bottom: 40px;
+      overflow: scroll;
+
+      .chatroom__main__info {
+
+        .chatroom__main__messanger {
+          font-size: 16px;
+          font-weight: bold;
+        }
+
+        .chatroom__main__info__dates {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+
+      .chatroom__main__message {
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .chatroom__form {
+    background-color: $message-form-color;
+    height: 90px;
+    padding: 20px 40px;
+
+    .chatroom__form__input-box {
+      background: #fff;
+      width: 100%;
+      position: relative;
+
+      .chatroom__form__input-box__text {
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
+      }
+
+      .chatroom__form__input-box__image {
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+
+        input {
+          display: none;
+        }
+      }
+    }
+
+
+
+  }
+
+  .chatroom__form__send-btn {
+    width: 100px;
+    height: 50px;
+    padding: 0 30px;
+    margin-left: 15px;
+    background-color: #38aef0;
+    color: white;
+    cursor: pointer;
+  }
+}
