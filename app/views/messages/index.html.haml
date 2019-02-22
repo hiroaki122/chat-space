@@ -29,14 +29,23 @@
 
         %div.chatroom__form.flex
           %div.chatroom__form__input-box.flex
-            %input.chatroom__form__input-box__text{placeholder: "type a message"}
-            %label.chatroom__form__input-box__image
-              %input{type:"file"}
-              %i.fa.fa-image
-          %input.chatroom__form__send-btn{type: "submit", value: "Send" }
+            = form_for [@group, @message] do |f|
+              = f.text_field :content, class: 'form__message', placeholder:'type a message'
+              .chatroom__form__input-box__mask
+                = f.label :image, class: 'form__mask__image' do
+                  = fa_icon 'picture-o' , class: 'icon'
+                  =f.file_field :image, class: 'hidden'
+              =  f.submit 'Send' , class: 'form__submit'
+
+          
+          -#   %input.chatroom__form__input-box__text{placeholder: "type a message"}
+          -#   %label.chatroom__form__input-box__image
+          -#     %input{type:"file"}
+          -#     %i.fa.fa-image
+          -# %input.chatroom__form__send-btn{type: "submit", value: "Send" }
             
             
-          %div.chatroom__form__submit-btn
+          -# %div.chatroom__form__submit-btn
 
 
 
