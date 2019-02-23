@@ -28,20 +28,39 @@
 
   }
 
-  .sidebar__item {
-    font-size: 15px;
-    color: $sidebar-font;
-    padding: 20px 5px 5px 20px;
+
+
+  .sidebar__main {
+    padding: 20px 20px 0;
+    overflow: scroll;
 
 
 
-    :nth-child(2) {
-      font-size: 11px;
-      margin-top: 5px;
+    .sidebar__main__group {
+      margin-bottom: 40px;
 
+
+
+      .group__name {
+        font-size: 15px;
+        color: $sidebar-font;
+        margin-bottom: 5px;
+        text-decoration: none;
+      }
+
+
+      .group__message {
+        color: $sidebar-font;
+        font-size: 11px;
+        margin-top: 5px;
+        text-decoration: none;
+      }
     }
   }
+
 }
+
+
 
 
 
