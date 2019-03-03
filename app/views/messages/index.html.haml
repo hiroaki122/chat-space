@@ -21,7 +21,7 @@
                 .group__name
                   = group.name
                 .group__message
-                  メッセージはまだありません。
+                  = group.show_last_message
 
       %div.chatroom
         %div.chatroom__header.flex
@@ -34,7 +34,7 @@
               %div Edit
         
         %div.chatroom__main
-          =render partial: 'messages/message'
+          =render @messages
 
         %div.chatroom__form.flex
           %div.chatroom__form__input-box.flex
