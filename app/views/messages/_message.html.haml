@@ -1,8 +1,11 @@
-%div.chatroom__main__box
-  %div.chatroom__main__info.flex
-    %div.chatroom__main__messanger
-      hiroaki
-    %div.chatroom__main__info__dates
-      2019/02/14(Thu) 15:12:19
-  %div.chatroom__main__message
-    さよなら！
+.chatroom__main__box
+  .chatroom__main__info.flex
+    .chatroom__main__messanger
+      = message.user.name
+    .chatroom__main__info__dates
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .chatroom__main__message
+    - if message.content.present?
+      = message.content
+    = image_tag message.image.url, class: 'chatroom__main__message__image' if message.image.present?
+
