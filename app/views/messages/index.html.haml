@@ -29,9 +29,11 @@
             %div テックエキスパート
             %div Member : hiroaki
           
-          =link_to "https://chat-space-sample.herokuapp.com/groups/205/edit" do
+         
             %div.chatroom__header__edit-btn
-              %div Edit
+              
+              = link_to "Edit", edit_group_path(params[:group_id]), method: :get
+
         
         %div.chatroom__main
           =render @messages
