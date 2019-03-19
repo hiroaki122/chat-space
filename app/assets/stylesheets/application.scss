@@ -1,15 +1,31 @@
 @import "./reset";
-@import "./index";
 @import "font-awesome";
-@import "modules/user";
-@import "config/colors";
+@import "user";
+@import "./_side";
+@import "main";
+@import "variable";
 @import "modules/flash";
-@import "modules/group";
+@import "groups/group";
 
-* {
-  box-sizing: border-box;
+// .news {
+// 	background-color: #38AEF0;
+// 	color: #ffffff;
+// 	text-align: center;
+// }
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+
+
+:root {
+  --main-gutter: 20px;
+  --top-padding: padding-top: 35px;
 }
 
-/*
- *= require font-awesome
- */
+
+.chat {
+  display: flex;
+  height: 100vh;
+}
